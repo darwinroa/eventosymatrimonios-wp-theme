@@ -23,7 +23,6 @@ if ( ! $attributes ) {
 <div class="hivepress-attributes-primary-custom">
 	
     <div class="mis-atributos-grid">
-      <h1>hola</h1>
         
         <?php foreach ( $attributes as $name => $value ) : ?>
             <?php
