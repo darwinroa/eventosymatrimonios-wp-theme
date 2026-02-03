@@ -18,6 +18,13 @@ function eventos_y_matrimonios_enqueue_styles() {
 
 function mdw_eventos_matrimonios_scripts() {
     wp_enqueue_style('mdw-styles', get_stylesheet_directory_uri() . '/assets/css/style.css');
+    wp_enqueue_script('mdw-scripts', get_stylesheet_directory_uri() . '/assets/js/script.js');
+    
+    // 1. Estilos de Swiper (CDN)
+    wp_enqueue_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', [], '11.0.0' );
+
+    // 2. Script de Swiper (CDN)
+    wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', [], '11.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'mdw_eventos_matrimonios_scripts' );
 
